@@ -1,0 +1,35 @@
+name = input("Enter ur name: ")
+
+if name.isdigit() and not name.strip():
+    print("Invalid name")
+    exit()
+else :
+    email = input("Enter ur email: ")
+
+is_valid = True
+
+if email.count('@') != 1:
+    is_valid = False
+
+if is_valid:
+    parts = email.split('@')
+    first_part = parts[0]
+    second_part = parts[1]
+
+    if not first_part or not second_part:
+        is_valid = False
+
+    elif '.' not in second_part:
+        is_valid = False
+    elif second_part[0] == '.' or second_part[-1] == '.':
+        is_valid = False
+
+    elif ' ' in first_part or ' ' in second_part:
+        is_valid = False
+
+
+if is_valid:
+    print("Valid email")
+else:
+    print("Invalid email")
+
