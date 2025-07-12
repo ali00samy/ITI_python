@@ -4,7 +4,7 @@ from office import Office
 
 
 def main():
-    office = Office("AI Hub")
+    office = Office("ITI")
 
     employees = [
         Employee(
@@ -21,7 +21,7 @@ def main():
     print(f"Total Employees: {Office.employeesNum}")
 
     for emp in employees:
-        print(f"\nSimulating {emp.name}")
+        print(f"{emp.name}")
         emp.sleep(7)
         emp.eat(2)
         emp.buy(1)
